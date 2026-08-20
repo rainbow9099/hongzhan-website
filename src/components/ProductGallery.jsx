@@ -21,7 +21,7 @@ export default function ProductGallery({ images, productName }) {
 
   return (
     <>
-      <div className="sticky top-28">
+      <div className="md:sticky md:top-28">
         <div
           className="relative aspect-square bg-gray-100 rounded-2xl overflow-hidden cursor-zoom-in"
           onMouseEnter={() => setZoomEnabled(true)}

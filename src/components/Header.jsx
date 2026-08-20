@@ -48,11 +48,10 @@ export default function Header() {
             <img
               src={Logo}
               alt=""
-              className={`h-10 w-auto object-contain transition-all ${
-                isScrolled || location.pathname !== '/'
+              className={`h-10 w-auto object-contain transition-all ${isScrolled || location.pathname !== '/'
                   ? 'scale-100'
                   : 'scale-110'
-              }`}
+                }`}
             />
             {/* <img
               src={textLogo}
@@ -72,15 +71,14 @@ export default function Header() {
                 <Link
                   key={item.key}
                   to={item.href}
-                  className={`text-sm font-medium transition-colors px-3 py-2 rounded-md ${
-                    active
+                  className={`text-sm font-medium transition-colors px-3 py-2 rounded-md ${active
                       ? isScrolled || location.pathname !== '/'
                         ? 'text-brand-600 bg-brand-50'
                         : 'text-white bg-white/15'
                       : isScrolled || location.pathname !== '/'
                         ? 'text-gray-700 hover:text-brand-500 hover:bg-gray-100'
                         : 'text-white/90 hover:text-white hover:bg-white/10'
-                  }`}
+                    }`}
                 >
                   {t(item.key)}
                 </Link>
@@ -91,6 +89,7 @@ export default function Header() {
           <div className="hidden md:flex items-center gap-4">
             <LanguageSwitcher isScrolled={isScrolled || location.pathname !== '/'} />
             <button
+              hidden
               className={`p-2 rounded-md transition-colors ${isScrolled || location.pathname !== '/' ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'
                 }`}
               aria-label="Search"
@@ -130,11 +129,10 @@ export default function Header() {
                   <Link
                     key={item.key}
                     to={item.href}
-                    className={`px-4 py-2 rounded-md transition-colors ${
-                      active
+                    className={`px-4 py-2 rounded-md transition-colors ${active
                         ? 'text-brand-600 bg-brand-50 font-medium'
                         : 'text-gray-700 hover:text-brand-500 hover:bg-brand-50'
-                    }`}
+                      }`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {t(item.key)}
